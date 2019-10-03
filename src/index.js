@@ -27,6 +27,18 @@ module.exports = function zeros(expression) {
 
         while (count <= number) // считаем сколько двоек и пятерок входит в последовательность факториала
         {
+            var temp = count;
+
+            while (temp % 2 == 0) {
+                countOfTwo++;
+                temp = temp / 2;
+            }
+
+            while (temp % 5 == 0) {
+                countOfFive++;
+                temp = temp / 5;
+            }
+            /*
             console.log(count);
             if (count % 10 != 0) {
 
@@ -43,7 +55,7 @@ module.exports = function zeros(expression) {
 
                 if (count / 10 == 2)
             }
-
+*/
             count += countOfExclamationPoint;
 
 
